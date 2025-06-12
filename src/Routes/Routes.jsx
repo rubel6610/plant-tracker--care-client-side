@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../MainLayouts/Root";
-import Home from "../Components/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRoutes from "./PrivateRoutes";
+import Home from "../Pages/Home";
 
 export const router = createBrowserRouter([
     {
@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
     {
         path:"addplant",
         element:<PrivateRoutes>
-                
+
         </PrivateRoutes>
     },
     {

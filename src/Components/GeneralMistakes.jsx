@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Home = () => {
+const GeneralMistakes = () => {
     return (
         <div>
-            fads
+            
         </div>
     );
 };
 
-export default Home;
+export default GeneralMistakes;
