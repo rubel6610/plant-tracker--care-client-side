@@ -16,11 +16,13 @@ const AllPlants = () => {
         <div>
             <Navbar />
            <h1 className='my-5 text-2xl text-center'>Total Plants: {datalength}</h1>
-           <div>
+          
+      
+            
             {
                 data.map(plant=><PlantsTable key={plant._id} plant={plant}></PlantsTable>)
             }
-           </div>
+         
         </div>
     );
 };

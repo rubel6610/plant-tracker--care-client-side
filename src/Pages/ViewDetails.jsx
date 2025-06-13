@@ -15,7 +15,7 @@ const ViewDetails = () => {
     return (
         <>
         <Navbar/>
-        <div className="max-w-3xl mx-auto p-6 bg-green-100 rounded-xl shadow-md mt-6 text-black text-center">
+        <div className="max-w-3xl mx-auto p-4 bg-green-100 rounded-xl shadow-md mt-6 text-black text-center">
       <h2 className="text-2xl  font-bold mb-4">{plant.name}</h2>
       <img
         src={plant.image}
