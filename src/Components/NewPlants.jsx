@@ -25,7 +25,7 @@ const NewPlants = () => {
   return (
     <section className="py-10 bg-green-100">
       <h2 className="text-3xl flex justify-center items-center gap-2 font-bold text-center text-green-800 mb-8"><GiPalmTree/> New Plants</h2>
-      <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+      <div className="grid md:grid-cols-3  gap-6 max-w-6xl mx-auto px-4">
         {plants.map(plant => (
           <div key={plant._id} className="border rounded-lg shadow-md p-4 bg-white">
             <img src={plant.image} alt={plant.name} className="h-40 w-full object-cover rounded" />

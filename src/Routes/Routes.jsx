@@ -9,6 +9,7 @@ import AllPlants from "../Pages/AllPlants";
 import ViewDetails from "../Pages/ViewDetails";
 import MyPlants from "../Pages/MyPlants";
 import NotFound from "../Pages/NotFound";
+import Updateplant from "../Pages/Updateplant";
 
 export const router = createBrowserRouter([
     {
@@ -28,14 +29,19 @@ export const router = createBrowserRouter([
         </PrivateRoutes>
     },
     {
+        path:"/update-plant/:id",
+        loader:()=>fetch(`http://localhost:3000/plants`),
+        Component:Updateplant,
+    },
+    {
         path: "all-plants",
-        element:<AllPlants />,
+        element: <AllPlants />,
         loader: () => fetch('http://localhost:3000/plants'),
 
     },
     {
         path: "all-plants/:id",
-        loader: ({params}) => fetch(`http://localhost:3000/singleplants/${params.id}`),
+        loader: ({ params }) => fetch(`http://localhost:3000/singleplants/${params.id}`),
         element: <PrivateRoutes>
             <ViewDetails />
         </PrivateRoutes>,
@@ -43,7 +49,7 @@ export const router = createBrowserRouter([
     {
         path: "my-plants",
         element: <PrivateRoutes>
-            <MyPlants/>
+            <MyPlants />
         </PrivateRoutes>,
     },
     {
@@ -55,7 +61,7 @@ export const router = createBrowserRouter([
         Component: Register,
     },
     {
-        path:"*",
-        Component:NotFound,
+        path: "*",
+        Component: NotFound,
     }
 ])

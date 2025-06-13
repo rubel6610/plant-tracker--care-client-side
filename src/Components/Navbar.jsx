@@ -4,10 +4,12 @@ import { FaLeaf, FaBars } from "react-icons/fa";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
+import ThemeToggle from "./ThemeToggle";
+
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-
+ 
   const handleLogOut = () => {
     logOut().catch((error) => {
       console.error(error.message);
@@ -55,11 +57,13 @@ const Navbar = () => {
       <div className="navbar-end">
         {!user ? (
           <div className="space-x-2">
+            
             <Link to="/login" className="btn btn-outline btn-sm">Login</Link>
             <Link to="/register" className="btn btn-outline btn-sm">Register</Link>
           </div>
         ) : (
           <div className="flex items-center gap-2">
+            <ThemeToggle/>
             <div>
               <img
                 data-tooltip-id="user-tooltip"

@@ -7,10 +7,12 @@ import PrimaryLevelPlants from '../Components/PrimaryLevelPlants';
 const Home = () => {
     return (
         <>
+        
             <Banner/>
             <NewPlants/>
             <GeneralMistakes/>
             <PrimaryLevelPlants/>
+
         </>
     );
 };
