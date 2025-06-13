@@ -29,15 +29,13 @@ export const router = createBrowserRouter([
     },
     {
         path: "all-plants",
-        element: <PrivateRoutes>
-            <AllPlants />
-        </PrivateRoutes>,
+        element:<AllPlants />,
         loader: () => fetch('http://localhost:3000/plants'),
 
     },
     {
         path: "all-plants/:id",
-        loader: () => fetch(`http://localhost:3000/plants`),
+        loader: ({params}) => fetch(`http://localhost:3000/singleplants/${params.id}`),
         element: <PrivateRoutes>
             <ViewDetails />
         </PrivateRoutes>,

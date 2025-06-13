@@ -17,12 +17,27 @@ const AllPlants = () => {
             <Navbar />
            <h1 className='my-5 text-2xl text-center'>Total Plants: {datalength}</h1>
           
-      
+      <div className="overflow-x-auto">
+      <table className="table-auto w-full border-collapse border border-gray-300 text-black">
+        <thead>
+          <tr className="bg-green-200">
+            <th className="border border-gray-300 p-2">Plant Name</th>
+            <th className="border border-gray-300 p-2">Category</th>
+           
+            <th className="border border-gray-300 p-2">Watering Frequency (days)</th>
+           
+            <th className="border border-gray-300 p-2">Actions</th>
+         
+          </tr>
+        </thead>
+        <tbody>
             
             {
                 data.map(plant=><PlantsTable key={plant._id} plant={plant}></PlantsTable>)
             }
-         
+          </tbody>
+      </table>
+    </div>
         </div>
     );
 };

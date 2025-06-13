@@ -30,7 +30,6 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-md px-4 md:px-8">
       <div className="navbar-start">
-        {/* Mobile Dropdown */}
         <div className="dropdown md:hidden">
           <label tabIndex={0} className="btn btn-ghost btn-circle text-xl">
             <FaBars />
@@ -43,19 +42,16 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Logo */}
         <Link to="/" className="text-2xl font-bold flex items-center gap-2">
           <FaLeaf className="text-green-600" />
           <span className="text-green-700">PlantTrackr</span>
         </Link>
       </div>
 
-      {/* Desktop Menu */}
       <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1 gap-4">{navLinks}</ul>
       </div>
 
-      {/* Right Side (Login / User Info) */}
       <div className="navbar-end">
         {!user ? (
           <div className="space-x-2">
