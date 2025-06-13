@@ -4,6 +4,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRoutes from "./PrivateRoutes";
 import Home from "../Pages/Home";
+import AddPlant from "../Pages/AddPlant";
 
 export const router = createBrowserRouter([
     {
@@ -17,9 +18,9 @@ export const router = createBrowserRouter([
         ]
     },
     {
-        path:"addplant",
+        path:"add-plant",
         element:<PrivateRoutes>
-
+            <AddPlant/>
         </PrivateRoutes>
     },
     {
