@@ -13,7 +13,6 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        //login method
         login(email, password)
             .then(() => {
                 Swal.fire({
@@ -32,6 +31,7 @@ const Login = () => {
             })
 
     }
+    //handleGoogleLogin
     const handleGoogle = ()=>{
         googleLogin()
          .then(() => {
