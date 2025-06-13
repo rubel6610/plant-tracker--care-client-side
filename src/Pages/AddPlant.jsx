@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router-dom';
+import { FaLeaf } from 'react-icons/fa';
+
 
 const AddPlant = () => {
   const { user } = useContext(AuthContext);
-    const navigate=useNavigate();
+    
   const handleAddPlant = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -41,7 +42,7 @@ const AddPlant = () => {
       .catch((error) => {
         console.error(error);
         Swal.fire({
-          title: '❌ Error!',
+          title: ' Error!',
           text: 'Something went wrong while adding the plant.',
           icon: 'error',
           confirmButtonColor: '#e53e3e',
@@ -51,8 +52,8 @@ const AddPlant = () => {
 
   return (
     <div className="max-w-2xl mx-auto my-10 bg-gradient-to-r from-green-100 via-green-300 to-amber-300 p-8 rounded-xl shadow-lg">
-      <h2 className="text-2xl font-bold mb-6 text-center text-green-700">
-        🌿 Add a New Plant
+      <h2 className="text-2xl flex items-center justify-center gap-2 font-bold mb-6 text-center text-green-700">
+        <FaLeaf/> Add a New Plant
       </h2>
       <form onSubmit={handleAddPlant} className="space-y-4">
         <div>
