@@ -54,7 +54,7 @@ const AddPlant = () => {
   return (
     <>
     <Navbar/>
-    <div className="max-w-2xl mx-auto my-10 bg-gradient-to-r from-green-100 via-green-300 to-amber-300 p-8 rounded-xl shadow-lg">
+    <div className="max-w-2xl mx-auto my-10 bg-gradient-to-r from-green-100 via-green-300 to-gray-400 p-8 rounded-xl shadow-lg">
       <h2 className="text-2xl flex items-center justify-center gap-2 font-bold mb-6 text-center text-green-700">
         <FaLeaf/> Add a New Plant
       </h2>

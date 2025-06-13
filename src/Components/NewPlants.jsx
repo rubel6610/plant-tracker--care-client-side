@@ -1,18 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { GiPalmTree } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const NewPlants = () => {
   const [plants, setPlants] = useState([]);
-
+  const {loading,setLoading}=useContext(AuthContext)
   useEffect(() => {
+    setLoading(true)
     fetch('http://localhost:3000/plants')
       .then(res => res.json())
       .then(data => {
         const newSixplant = data.slice(-6).reverse(); 
         setPlants(newSixplant);
+        setLoading(false)
       });
   }, []);
+  if(loading){
+    return  <div className="flex justify-center items-center h-screen">
+      <span className="loading loading-dots loading-lg text-green-600"></span>
+    </div>
+  }
 
   return (
     <section className="py-10 bg-green-100">

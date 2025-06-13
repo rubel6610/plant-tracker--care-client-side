@@ -1,11 +1,17 @@
 import React from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useNavigation, useParams } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 
 const ViewDetails = () => {
     const plants = useLoaderData();
     const {id}=useParams();
     const plant = plants.find(plan=>plan._id == id);
+    const Navigation = useNavigation();
+    if(Navigation.state === "loading"){
+      return  <div className="flex justify-center items-center h-screen">
+      <span className="loading loading-dots loading-lg text-green-600"></span>
+    </div>
+    }
     return (
         <>
         <Navbar/>
