@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 import { FaLeaf } from 'react-icons/fa';
+import Navbar from '../Components/Navbar';
 
 
 const AddPlant = () => {
@@ -51,6 +52,8 @@ const AddPlant = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="max-w-2xl mx-auto my-10 bg-gradient-to-r from-green-100 via-green-300 to-amber-300 p-8 rounded-xl shadow-lg">
       <h2 className="text-2xl flex items-center justify-center gap-2 font-bold mb-6 text-center text-green-700">
         <FaLeaf/> Add a New Plant
@@ -167,7 +170,9 @@ const AddPlant = () => {
         </button>
       </form>
     </div>
+     </>
   );
+ 
 };
 
 export default AddPlant;
