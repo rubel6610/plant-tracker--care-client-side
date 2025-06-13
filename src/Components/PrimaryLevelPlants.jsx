@@ -11,7 +11,7 @@ const PrimaryLevelPlants = () => {
   
   return (
     <section className="py-10 bg-green-100">
-      <h2 className="text-3xl font-bold text-center text-green-700 mb-6">🪴 Beginner-Friendly Plants</h2>
+      <h2 className="text-3xl font-bold text-center text-green-700 mb-6"> Beginner-Friendly Plants</h2>
       <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 px-4">
         {plants.map((p, i) => (
           <div key={i} className="bg-white text-green-700 p-4 rounded-lg shadow">

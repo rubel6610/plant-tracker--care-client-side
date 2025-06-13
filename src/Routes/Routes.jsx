@@ -8,6 +8,7 @@ import AddPlant from "../Pages/AddPlant";
 import AllPlants from "../Pages/AllPlants";
 import ViewDetails from "../Pages/ViewDetails";
 import MyPlants from "../Pages/MyPlants";
+import NotFound from "../Pages/NotFound";
 
 export const router = createBrowserRouter([
     {
@@ -54,5 +55,9 @@ export const router = createBrowserRouter([
     {
         path: "register",
         Component: Register,
+    },
+    {
+        path:"*",
+        Component:NotFound,
     }
 ])

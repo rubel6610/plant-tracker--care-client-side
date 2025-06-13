@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
-import { Link } from 'react-router-dom';
-import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';;
 import Navbar from '../Components/Navbar';
 
 const MyPlants = () => {
@@ -25,31 +24,6 @@ const MyPlants = () => {
   
   }, [user]);
 
-  const handleDelete = (id) => {
-    Swal.fire({
-      title: 'Are you sure?',
-      text: "You want to delete this plant?",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#16a34a',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
-    }).then(result => {
-      if (result.isConfirmed) {
-        fetch(`http://localhost:3000/plants/${id}`, {
-          method: 'DELETE',
-        })
-        .then(res => res.json())
-        .then(data => {
-          if (data.deletedCount > 0) {
-            Swal.fire('Deleted!', 'Plant has been deleted.', 'success');
-            setMyPlants(prev => prev.filter(plant => plant._id !== id));
-          }
-        });
-      }
-    });
-  };
-
   return (
 <>
 <Navbar/>
@@ -71,7 +45,7 @@ const MyPlants = () => {
                 <td className="border p-2">{plant.category}</td>
                 <td className="border p-2 flex justify-center gap-2">
                   <Link to={`/update-plant/${plant._id}`} className="btn btn-sm btn-info">Update</Link>
-                  <button onClick={() => handleDelete(plant._id)} className="btn btn-sm btn-error text-white">Delete</button>
+                  <button className="btn btn-sm btn-error text-white">Delete</button>
                 </td>
               </tr>
             ))}
