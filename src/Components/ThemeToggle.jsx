@@ -4,7 +4,7 @@ import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);

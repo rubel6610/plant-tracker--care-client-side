@@ -1,6 +1,7 @@
 # 🌿 Plant Care Tracker
 
-**Live Website:** [🌐 https://plant-care-tracker.web.app](https://plant-care-tracker.web.app)
+**Live Website:** [🌐 plant-trackr.surge.sh]
+
 
 Plant Care Tracker is a full-stack web application that helps users organize and monitor the health, care level, and watering schedule of their plants.
 
