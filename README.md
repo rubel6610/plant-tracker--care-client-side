@@ -1,12 +1,30 @@
-# React + Vite
+# 🌿 Plant Care Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Website:** [🌐 https://plant-care-tracker.web.app](https://plant-care-tracker.web.app)
 
-Currently, two official plugins are available:
+Plant Care Tracker is a full-stack web application that helps users organize and monitor the health, care level, and watering schedule of their plants.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔐 **User Authentication** — Sign up, log in, and manage plants securely using Firebase.
+- 🌱 **Add & Update Plants** — Create and edit plant details including watering frequency, care level, and health status.
+- 📋 **My Plants Page** — View only the plants added by the logged-in user with options to update or delete.
+- 📅 **Sort by Date & Care Level** — Sort all plants by next watering date or care difficulty.
+- 🌗 **Light/Dark Theme Toggle** — Switch between themes with a simple and intuitive toggle button.
+- 🖼️ **New Plants & Tips Sections** — Homepage includes featured plants, plant care tips, and beginner guides.
+- 🧾 **SweetAlert2 Integration** — Get user-friendly confirmation and success messages on actions.
+
+---
+
+## 🛠️ Tech Stack
+
+- React + React Router DOM  
+- Tailwind CSS + DaisyUI  
+- Firebase Authentication  
+- MongoDB + Express (Backend)  
+- SweetAlert2  
+
+
+
