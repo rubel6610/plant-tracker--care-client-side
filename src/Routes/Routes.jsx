@@ -7,45 +7,52 @@ import Home from "../Pages/Home";
 import AddPlant from "../Pages/AddPlant";
 import AllPlants from "../Pages/AllPlants";
 import ViewDetails from "../Pages/ViewDetails";
+import MyPlants from "../Pages/MyPlants";
 
 export const router = createBrowserRouter([
     {
-        path:"/",
-        Component:Root,
-        children:[
+        path: "/",
+        Component: Root,
+        children: [
             {
-                index:true,
-                Component:Home,
+                index: true,
+                Component: Home,
             }
         ]
     },
     {
-        path:"add-plant",
-        element:<PrivateRoutes>
-            <AddPlant/>
+        path: "add-plant",
+        element: <PrivateRoutes>
+            <AddPlant />
         </PrivateRoutes>
     },
     {
-        path:"all-plants",
-        element:<PrivateRoutes>
-            <AllPlants/>
+        path: "all-plants",
+        element: <PrivateRoutes>
+            <AllPlants />
         </PrivateRoutes>,
-        loader:()=>fetch('http://localhost:3000/plants'),
-        
+        loader: () => fetch('http://localhost:3000/plants'),
+
     },
     {
-        path:"all-plants/:id",
-        loader:()=>fetch(`http://localhost:3000/plants`),
-        element:<PrivateRoutes>
-            <ViewDetails/>
+        path: "all-plants/:id",
+        loader: () => fetch(`http://localhost:3000/plants`),
+        element: <PrivateRoutes>
+            <ViewDetails />
         </PrivateRoutes>,
     },
     {
-        path:"login",
-        Component:Login,
+        path: "my-plants",
+        element: <PrivateRoutes>
+            <MyPlants/>
+        </PrivateRoutes>,
     },
     {
-        path:"register",
-        Component:Register,
+        path: "login",
+        Component: Login,
+    },
+    {
+        path: "register",
+        Component: Register,
     }
 ])

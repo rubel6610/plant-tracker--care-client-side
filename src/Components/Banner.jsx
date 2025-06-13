@@ -6,9 +6,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Banner = () => {
   return (
-    <div className="max-w-screen-xl mx-auto mt-4">
+    <div className="max-w-screen-xl mx-auto mt-4 my-5">
       <Carousel autoPlay infiniteLoop showThumbs={false}>
-        <div className="bg-green-100  p-8 rounded-xl text-center">
+        <div className="bg-green-100  py-8 rounded-xl text-center">
           <h2 className="text-3xl font-bold text-green-800 flex justify-center items-center gap-2"><FaLeaf/> Welcome to PlantTrackr</h2>
           <p className="text-lg mt-2 text-green-800 ">Your personal plant care assistant.</p>
         </div>
