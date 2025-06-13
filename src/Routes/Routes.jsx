@@ -30,18 +30,18 @@ export const router = createBrowserRouter([
     },
     {
         path:"/update-plant/:id",
-        loader:()=>fetch(`http://localhost:3000/plants`),
+        loader:()=>fetch(`https://plant-care-tracker-server-alpha.vercel.app/plants`),
         Component:Updateplant,
     },
     {
         path: "all-plants",
         element: <AllPlants />,
-        loader: () => fetch('http://localhost:3000/plants'),
+        loader: () => fetch('https://plant-care-tracker-server-alpha.vercel.app/plants'),
 
     },
     {
         path: "all-plants/:id",
-        loader: ({ params }) => fetch(`http://localhost:3000/singleplants/${params.id}`),
+        loader: ({ params }) => fetch(`https://plant-care-tracker-server-alpha.vercel.app/singleplants/${params.id}`),
         element: <PrivateRoutes>
             <ViewDetails />
         </PrivateRoutes>,

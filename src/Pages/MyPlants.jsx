@@ -12,7 +12,7 @@ const MyPlants = () => {
     const getmyplant = async () => {
       const email = user?.email;
       try {
-        await fetch(`http://localhost:3000/myplants?email=${email}`)
+        await fetch(`https://plant-care-tracker-server-alpha.vercel.app/myplants?email=${email}`)
           .then(res => res.json())
           .then(data => {
             setMyPlants(data)
@@ -36,7 +36,7 @@ const MyPlants = () => {
     confirmButtonText: 'Yes, delete it!'
   }).then((result) => {
     if (result.isConfirmed) {
-      fetch(`http://localhost:3000/plants/${id}`, {
+      fetch(`https://plant-care-tracker-server-alpha.vercel.app/plants/${id}`, {
         method: "DELETE",
       })
         .then(res => res.json())

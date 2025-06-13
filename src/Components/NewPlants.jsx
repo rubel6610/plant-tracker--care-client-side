@@ -8,7 +8,7 @@ const NewPlants = () => {
   const {loading,setLoading}=useContext(AuthContext)
   useEffect(() => {
     setLoading(true)
-    fetch('http://localhost:3000/plants')
+    fetch('https://plant-care-tracker-server-alpha.vercel.app/plants')
       .then(res => res.json())
       .then(data => {
         const newSixplant = data.slice(-6).reverse(); 

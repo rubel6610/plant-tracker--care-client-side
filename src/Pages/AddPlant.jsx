@@ -20,7 +20,7 @@ const AddPlant = () => {
       userEmail: user.email,
     };
 
-    fetch('http://localhost:3000/plants', {
+    fetch('https://plant-care-tracker-server-alpha.vercel.app/plants', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
